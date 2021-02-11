@@ -1,0 +1,20 @@
+{
+  "name": "test-challenge",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "uuid": "^8.3.2",
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "vite": "^1.0.0-rc.13"
+  }
+}

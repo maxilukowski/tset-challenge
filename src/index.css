@@ -1,0 +1,9 @@
+input {   
+  outline: 0 none;
+  border-width: 2px;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+}
