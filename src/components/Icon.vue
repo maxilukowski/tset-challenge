@@ -1,5 +1,5 @@
 <template>
-    <span class="w-3 h-3 p-2 cursor-pointer">
+    <span class="w-3 h-3 p-2 cursor-pointer" >
         <i
             class="fas"
             :class="icon"

@@ -1,7 +1,7 @@
 <template>
     <div class="text-right mr-16 pr-2">
         Total: 
-        <span class="font-bold">
+        <span class="font-bold" data-cy="totalValue">
             {{ total }}
         </span>
         EUR

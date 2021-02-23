@@ -4,15 +4,16 @@
     @mouseenter="enter"
     @mouseleave="leave"
     >
-        <div class="w-1/12 -mr-2 ml-2"
+        <div class="w-1/12 -mr-2 ml-2"  
         >
-            <Icon :id="`${item.id}-edit-icon`" v-show="showIcons && !beingEdited" icon="fa-pencil-alt" @click="edit" />
+            <Icon :data-cy="'editIcon'+index" :id="`${item.id}-edit-icon`" v-show="showIcons && !beingEdited" icon="fa-pencil-alt" @click="edit" />
         </div>
 
         <div class="flex-grow flex flex-col"
         >
             <span v-if="!beingEdited && !isGhost" class="" > {{ formattedLabel }}</span>
             <input v-else v-model="savedLabel"
+                :data-cy="'labelInput'+index"
                 :id="`${item.id}-label-input`"
                 class="focus:border-black focus:text-black"
                 :class="[
@@ -26,8 +27,9 @@
             </Warning>
         </div>
         <div class="w-1/3 flex flex-col">
-            <div v-if="!beingEdited && !isGhost" class="text-right" > {{ formattedValue }}</div>
+            <div :data-cy="'orderRow'+index" v-if="!beingEdited && !isGhost" class="text-right" > {{ formattedValue }}</div>
             <input v-else v-model.number="savedValue"
+                :data-cy="'labelInputValue'+index"
                 type="number"
                 :id="`${item.id}-value-input`"
                 class="text-right focus:border-black focus:text-black"
@@ -39,8 +41,8 @@
             </Warning>
         </div>
         <div class="w-16" >
-            <Icon :id="`${item.id}-thrash-icon`" v-show="showIcons && !beingEdited && !isBase" icon="fa-trash-alt" @click="trash" />
-            <Icon :id="`${item.id}-check-icon`" v-show="beingEdited" icon="fa-check" @click="submitChanges" />
+            <Icon :data-cy="'trashIcon'+index" :id="`${item.id}-thrash-icon`" v-show="showIcons && !beingEdited && !isBase" icon="fa-trash-alt" @click="trash" />
+            <Icon :data-cy="'checkIcon'+index" :id="`${item.id}-check-icon`" v-show="beingEdited" icon="fa-check" @click="submitChanges" />
         </div>
     </div>
 </template>

@@ -7,6 +7,7 @@
                 @start-editing="startEditingField"
                 @stop-editing="stopEditingField" />
             <Field
+                :data-cy="'fieldRow'+i"
                 v-for="(item, i) in items"
                 :key="item.id" :item="item"
                 :index="i"
